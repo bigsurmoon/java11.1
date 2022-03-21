@@ -31,43 +31,43 @@ class ProductManagerTest {
 
     @Test
     public void shouldSearch1984() {
-        Product[] expected = manager.searchBy("1984");
-        Product[] actual = new Product[]{book1};
+        Product[] actual = manager.searchBy("1984");
+        Product[] expected = new Product[]{book1};
         assertArrayEquals(expected, actual);
     }
 
     @Test
     public void shouldSearchAynRand() {
-        Product[] expected = manager.searchBy("Ayn Rand");
-        Product[] actual = new Product[]{book2};
+        Product[] actual = manager.searchBy("Ayn Rand");
+        Product[] expected = new Product[]{book2};
         assertArrayEquals(expected, actual);
     }
 
     @Test
     public void shouldSearch3310() {
-        Product[] expected = manager.searchBy("Nokia 3310");
-        Product[] actual = new Product[]{smartphone3};
+        Product[] actual = manager.searchBy("Nokia 3310");
+        Product[] expected = new Product[]{smartphone3};
         assertArrayEquals(expected, actual);
     }
 
     @Test
     public void shouldSearchSamsung() {
-        Product[] expected = manager.searchBy("Samsung");
-        Product[] actual = new Product[]{smartphone1};
+        Product[] actual = manager.searchBy("Samsung");
+        Product[] expected = new Product[]{smartphone1};
         assertArrayEquals(expected, actual);
     }
 
     @Test
     public void shouldSearchVoid() {
-        Product[] expected = manager.searchBy("");
-        Product[] actual = new Product[]{book1, book2, book3, smartphone1, smartphone2, smartphone3};
+        Product[] actual = manager.searchBy("");
+        Product[] expected = new Product[]{book1, book2, book3, smartphone1, smartphone2, smartphone3};
         assertArrayEquals(expected, actual);
     }
 
     @Test
     void shouldSearchWithoutMatch() {
-        Product[] expected = manager.searchBy("LG");
-        Product[] actual = new Product[]{};
+        Product[] actual = manager.searchBy("LG");
+        Product[] expected = new Product[]{};
         assertArrayEquals(expected, actual);
     }
 }

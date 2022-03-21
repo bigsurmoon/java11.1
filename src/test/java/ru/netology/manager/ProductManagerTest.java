@@ -66,8 +66,8 @@ class ProductManagerTest {
 
     @Test
     void shouldSearchWithoutMatch() {
-        Product[] actual = manager.searchBy("LG");
-        Product[] expected = new Product[] {};
+        Product[] expected = manager.searchBy("LG");
+        Product[] actual = new Product[]{};
         assertArrayEquals(expected, actual);
     }
 }
